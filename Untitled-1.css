@@ -1,0 +1,9 @@
+/*เลือก article ให้ชิดทางด้านขวา 78% และกำหนดสีพื้น*/
+article{
+    float: right;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid gainsboro;
+    margin-top: 1px;
+    top: 15px;
+}

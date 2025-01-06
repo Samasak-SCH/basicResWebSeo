@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="utf-8">
+    <title>Python Programming</title>
+    <meta name="description"
+        content="Python tutorail คือ เว็บไซต์สำหรับที่นำเสนอการเขียนโปรแกรมภาษา Python ขึ้นพื้นฐานที่เหมาะสำหรับผู้ต้องการเขียนโปรแกรมและผู้ฝึกหัดเขียนโปรแกรมในเบื้องต้น">
+    <meta name="keywords" content="Python, Programming, User Input, Input">
+    <meta name="author" content="Somsak Tubthongdee">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="content.css">
+
+    <style>
+        /*กำหนดสี Body*/
+        body {
+            background-color: white;
+        }
+
+        h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: white;
+
+        }
+
+        h2 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: white;
+            margin: 0 20px 0 20px;
+        }
+
+        h3 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: black;
+            margin: 0 20px 0 20px;
+        }
+
+        h4 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: black;
+            margin: 0 20px 0 20px;
+        }
+
+        h5 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: black;
+        }
+
+        h6 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: white;
+        }
+
+        p {
+            margin: 35px;
+        }
+
+        .tab_1 {
+            display: inline-block;
+            margin-left: 40px;
+        }
+
+        .tab_2 {
+            display: inline-block;
+            margin-left: 60px;
+        }
+
+        .tab_3 {
+            display: inline-block;
+            margin-left: 80px;
+        }
+
+        .tab_4 {
+            display: inline-block;
+            margin-left: 100px;
+        }
+
+        .tab_5 {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .thai_distributed {
+            text-align: justify;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .column-Main {
+            flex: 70%;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .column-Secondary {
+            flex: 30%;
+            padding: 20px;
+            text-align: right;
+        }
+
+        /* Column container */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .main-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        fieldset {
+            border-radius: 8px;
+            margin-top: 1px;
+        }
+
+        .navigation {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-end;
+            border-radius: 8px;
+            list-style: none;
+            margin: 0;
+            background: deepskyblue;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            display: block;
+            padding: 1em;
+            color: white;
+        }
+
+        .navigation a:hover {
+            background: #1565C0;
+            background-color: #ddd;
+            color: black;
+        }
+
+        img {
+            border-radius: 1%;
+        }
+
+        @media screen and (min-width:769px) {
+            .navigation {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width:429px) and (max-width:768px) {
+
+            .navigation {
+                justify-content: space-around;
+            }
+
+            .row {
+                flex-direction: column;
+            }
+
+            .column-Main {
+                text-align: center;
+                font-size: 75%;
+            }
+
+            .column-Secondary {
+                text-align: center;
+            }
+
+            .aside {
+                display: none;
+            }
+
+            .article{
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:428px) {
+
+            .navigation {
+                display: flex;
+                flex-flow: column wrap;
+                padding: 0;
+            }
+
+            .navigation a {
+                text-align: center;
+                padding: 10px;
+                border-top: 1px solid rgba(255, 255, 255, 0.3);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .navigation li:last-of-type a {
+                border-bottom: none;
+            }
+
+            .row {
+                flex-direction: column;
+            }
+
+            .column-Main {
+                display: none;
+            }
+
+            .column-Secondary {
+                text-align: center;
+            }
+
+            .aside {
+                display: none;
+            }
+
+            .article{
+                width: 100%;
+            }
+
+        }
+    </style>
+
+    <script type="text/javascript">
+        function display_01() {
+            var str = document.getElementById("hint_01").innerHTML;
+            alert(str);
+        }
+
+        function display_02() {
+            var str = document.getElementById("hint_02").innerHTML;
+            alert(str);
+        }
+        function display_03() {
+            var str = document.getElementById("hint_03").innerHTML;
+            alert(str);
+        }
+        function display_04() {
+            var str = document.getElementById("hint_04").innerHTML;
+            alert(str);
+        }
+        function display_05() {
+            var str = document.getElementById("hint_05").innerHTML;
+            alert(str);
+        }
+        function display_06() {
+            var str = document.getElementById("hint_06").innerHTML;
+            alert(str);
+        }
+        function display_07() {
+            var str = document.getElementById("hint_07").innerHTML;
+            alert(str);
+        }
+        function display_08() {
+            var str = document.getElementById("hint_08").innerHTML;
+            alert(str);
+        }
+        function display_09() {
+            var str = document.getElementById("hint_09").innerHTML;
+            alert(str);
+        }
+
+    </script>
+
+    <p hidden id="hint_01">
+        Python version 2.7 : raw_input()
+        Python version 3.6 : input()
+    </p>
+
+    <p hidden id="hint_02">
+        รับข้อมูลได้ทั้งตัวเลข(Number) และ ตัวอักษร(Character)
+    </p>
+
+    <p hidden id="hint_03">
+        input() สำหรับรับค่าที่เป็นตัวอักษร(Character)
+        int(input()) สำหรับรับค่าที่เป็นตัวเลขจำนวนเต็ม(Number)
+        float(input()) สำหรับรับค่าที่เป็นตัวเลขจำนวนเทศนิยม(Decomal)
+    </p>
+
+    <p hidden id="hint_04">
+        input() สำหรับรับค่าที่เป็นตัวอักษร(Character)
+        int(input()) สำหรับรับค่าที่เป็นตัวเลขจำนวนเต็ม(Number)
+        float(input()) สำหรับรับค่าที่เป็นตัวเลขจำนวนเทศนิยม(Decomal)
+    </p>
+
+    <p hidden id="hint_05">
+        input() สำหรับรับค่าที่เป็นตัวอักษร(Character)
+        int(input()) สำหรับรับค่าที่เป็นตัวเลขจำนวนเต็ม(Number)
+        float(input()) สำหรับรับค่าที่เป็นตัวเลขจำนวนเทศนิยม(Decomal)
+    </p>
+
+    <p hidden id="hint_06">
+        while True:
+            fname = input("กรุณาใส่ชื่อของท่าน : ")
+            if len(fname) &le; 20:
+                break
+            print("ต้องไม่เกิน 20 ตัวอักษร")
+        print(f"\nชื่อของท่านคือ : {inputVar}")
+    </p>
+
+    <p hidden id="hint_07">
+        while True:
+        try:
+            zipCode = int(input("กรุณาระบุหมายเลขไปรษณีย์ : "))
+            if len(str(zipCode)) == 5:
+                break
+            print("ต้องไม่เกิน 5 ตัวเลข")
+        except ValueError:
+            print("รหัสไปรษณีย์ต้องเป็นตัวเลขเท่าน้้น!!!!!")
+        print(f"\nรหัสไปรษณีย์คือ : {inputVar}")
+
+    <p hidden id="hint_08">
+        while True:
+            inputVar = input("กรุณาป้อนค่าที่ต้องการ : ")
+            if len(inputVar) &le; 10:
+                break
+            print("กรุณาป้อนค่าที่ต้องการไม่เกิน 10 ตัวอักษร")
+        print(f"\nค่าที่ต้องการคือ : {inputVar}")
+    </p>
+
+    <p hidden id="hint_09">
+        while True:
+            try:
+            price = float(input("กรุณาใส่ราคาสินค้า : "))
+                break
+            except ValueError:
+                print("กรุณาใส่ราคาเป็นตัวเลขหรือทศนิยม!!!")
+        print(f"\nราคาสินค้าคือ : {price}")
+    </p>
+
+</head>
+
+<body>
+    <header>
+        <!-- The flexible grid (content) -->
+        <div class="row">
+            <div class="column-Main">
+                <b style="font-size:32px;">
+                    มหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร<br>
+                    <div class="hidden-md hidden-sm hidden-xs">Rajamangala University of Technology Phra Nakhon</div>
+                </b>
+            </div>
+
+            <div class="column-Secondary">
+                <img alt="มหาวิทยาลัยเทคโนโลยีราชมงคลพระนคร (อังกฤษ: Rajamangala University of Technology Phra Nakhon; อักษรย่อ: มทร.พ. (RMUTP)" src="logo-300x237.png" alt="RMUTP LOGO" width="auto" height="100px">
+            </div>
+        </div>
+    </header>
+
+    <div class="hidden-xxl hidden-xl hidden-lg hidden-md">
+        <ul class="navigation">
+            <li><a style="font-size:14px;" href="https://www.w3schools.com/python/default.asp" target="_blank">W3SCHOOL</a></li>
+            <li><a style="font-size:14px;" href="https://www.python.org/" target="_blank"> PYTHON ORG </a></li>
+            <li><a style="font-size:14px;" href="https://www.youtube.com/watch?v=wodYroZ4_po&list=PLoTScYm9O0GEoKcXJ-C5NrywxpvATaoG1&index=1" target="_blank"> PYTHON INSTALL </a></li>
+        </ul>
+    </div>
+
+    <p style="margin: 20px 0px 0px 0px"><img alt="Python ORG" src="python-3.svg" alt="PYTHON LOGO" width="auto" height="172"
+            class="center"></p>
+    <div class="main-text">
+        <h1>PYTHON TUTORIAL FOR BEGINNER</h1>
+    </div>
+    <div class="aside">
+        <aside>
+            <h2 style="font-size:20px;"> สำหรับผู้สนใจ </h2>
+            <ul>
+                <li>
+                    <a style="font-size:14px;" href="https://www.w3schools.com/python/default.asp" target="_blank">
+                        W3SCHOOL </a>
+                </li>
+                <li>
+                    <a style="font-size:14px;" href="https://www.python.org/" target="_blank"> PYTHON ORG </a>
+                </li>
+                <li>
+                    <a style="font-size:14px;"
+                        href="https://www.youtube.com/watch?v=wodYroZ4_po&list=PLoTScYm9O0GEoKcXJ-C5NrywxpvATaoG1&index=1"
+                        target="_blank"> ติดตั้ง PYTHON </a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+    <main>
+        <div>
+            <article class="article" style="background-color: #f5b7b1;">
+                <fieldset>
+                    <legend>
+                        <h2 style="font-size:20px;"> บทนำ </h2>
+                    </legend>
+                    <div>
+
+                        <p class="thai_distributed" style="margin: 0px 0px 0px 20px">
+                            <span class="main-text"><a href="https://en.wikipedia.org/wiki/Guido_van_Rossum"
+                                target="_blank"><img alt="The creator of the Python programming language." src="Guido_van_Rossum_OSCON_2006.jpg" alt="Guido van Rossum" width="auto" height="256px"></span></a>
+                            <p><span class="main-text">หมายเหตุ : ที่มา &nbsp;<cite>https://en.wikipedia.org/wiki/Guido_van_Rossum</cite></span></p>
+                            <span class="tab_1"></span><strong><a href="ภาษาไพทอน - วิกิพีเดีย.html"
+                                    target="_blank">ภาษาไพธอน</a></strong>
+                            เป็นภาษาการเขียนโปรแกรมคอมพิวเตอร์ระดับสูงที่พัฒนาขึ้นจาก Guido van Rossum
+                            และได้ถูกนำออกมาให้ใช้งานกันในปี 1991 โดยการนำจุดเด่นของภาษาต่าง ๆ เอาไว้เข้าด้วยกัน
+                            กล่าวคือ
+                            <p>
+                                <ul class="tab_2">
+                                    <li>การมีไวยกรณ์ของภาษาที่เข้าใจง่ายซึ่งทำให้ง่ายต่อการศึกษาและพัฒนา</li>
+                                    <li>การเขียนโปรแกรมสั้นกระชับจึงทำให้เขียนโปรแกรมได้เร็วขึ้น</li>
+                                    <li>ลดความซับซ้อนและความผิดพลาดจากการประกาศตัวแปร</li>
+                                </ul>
+                            </p>
+                        </p>
+
+                        <p class="thai_distributed" style="margin: 0px 0px 0px 20px">
+                            <span
+                                class="tab_1"></span>ซึ่งโปรแกรมภาษาไพธอนจะทำการกำหนดชนิดและขนาดข้อมูลให้กับผู้ใช้งานโดยอัตโนมัติทำให้ง่ายต่อการทำงานและการเขียนโปรแกรม
+                            นอกจากนี้ภาษาไพธอนยังสนับสนุนการเขียนโปรแกรมในหลายรูปแบบ เช่น
+                            <p>
+                                <ul class="tab_2">
+                                    <li>การเขียนโปรแกรมแบบโครงสร้าง</li>
+                                    <li><a href="การเขียนโปรแกรมเชิงวัตถุ - วิกิพีเดีย.html"
+                                            target="_blank">การเขียนโปรแกรมเชิงวัตถุ (OOP)</a></li>
+                                    <li>การสร้างโปรแกรม GUI, CGI และการสร้างเกมส์</li>
+                                    <li>การติดต่อกับฐานข้อมูล</li>
+                                    <li>การทำงานผ่านระบบเครือข่าย และระบบอีเมล</li>
+                                    <li>การทำงานข้ามแพลตฟอร์ม</li>
+                                </ul>
+                            </p>
+                        </p>
+
+                    </div>
+                </fieldset>
+            </article>
+        </div>
+
+        <article class="article" style="background-color: gainsboro;">
+            <fieldset>
+                <legend>
+                    <h2 style="font-size:20px;"> เนื้อหา </h2>
+                </legend>
+
+                <div>
+
+                    <p class="thai_distributed" style="margin: 0px 0px 0px 20px">
+                    <p>
+                    <h4> การรับข้อมูลจากผู้ใช้ (User Input) คืออะไร? ใช้ทำอะไร? ใช้งานอย่างไร? </h4>
+                    </p>
+
+                    <p style="margin: 0px 0px 0px 20px">
+                        <span class="tab_1"></span>user input
+                        ในภาษาไพธอนเป็นการเขียนโปรแกรมให้ทำการรอรับคำสั่งจากผู้ใช้งานผ่าน command prompt
+                        โดยที่ค่าที่ได้รับเข้ามานั้นจะถูกรับเข้ามาด้วยคำสั้ง
+                        <code><strong><em >input()</em></strong></code>
+                        ผ่านทางคีย์บอร์ดซึ่งสามารถรับค่าได้ทั้งตัวอักษรและค่าตัวเลข
+                    </p>
+
+                    </p>
+
+                    <p class="thai_distributed" style="margin: 0px 0px 0px 20px">
+                    <p>
+                    <h4> รูปแบบการใช้งานการรับข้อมูลจากผู้ใช้ (User Input) </h4>
+                    </p>
+
+                    <p>
+                    <ul class="tab_2" style="margin: 0px 0px 0px 20px">
+                        <li>Python Version 3.6 : <code><strong><em >input()</em></strong></code></li>
+                        <li>Python Version 2.7 : <code><strong><em >raw_input()</em></strong></code></li>
+                    </ul>
+                    </p>
+                    </p>
+
+                    <p>
+                    <h4> การใช้งานการรับข้อมูลจากผู้ใช้ (User Input) ใน Python เวอร์ชั่นต่าง ๆ </h4>
+                    </p>
+
+                    <p style="margin: 0px 0px 0px 20px">
+                        <span class="tab_1"></span><u>Python Version 3.6</u>
+                        <br>
+                        <span class="tab_1"></span>username =
+                        <span style="color: blue;">input</span>
+                        (<span style="color: red;">"Enter username:"</span>)
+                        <br>
+                        <span class="tab_1"></span><span style="color: blue;">print = </span>
+                        (<span style="color: red;">"Username is:"</span>+ username)
+                        <div class="tab_5">
+                            <div class="row">
+                                <link rel="stylesheet"
+                                    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+                                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+                                <div class="col-lg-6">
+                                    <div class="thumbnail">
+                                        <a href="Ex/Ex-01_cmd.png" target="_blank">
+                                            <img src="Ex/Ex-01_cmd.png" alt="Lights" style="width:100%">
+                                            <div class="caption">
+                                                <p class="main-text">Code command example in Python version 3.6</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="thumbnail">
+                                        <a href="Ex/Ex-01_result.png" target="_blank">
+                                            <img src="Ex/Ex-01_result.png" alt="Nature" style="width:100%">
+                                            <div class="caption">
+                                                <p class="main-text">Code result example in Python version 3.6</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </p>
+
+                    <p style="margin: 0px 0px 0px 20px">
+                        <span class="tab_1"></span><u>Python Version 2.7</u>
+                        <br>
+                        <span class="tab_1"></span>username =
+                        <span style="color: blue;">raw_input</span>
+                        (<span style="color: red;">"Enter username:"</span>)
+                        <br><span class="tab_1"></span><span style="color: blue;">print = </span>
+                        (<span style="color: red;">"Username is:"</span>+ username)
+                        <div class="tab_5">
+                            <div class="row">
+                                <link rel="stylesheet"
+                                    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+                                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+                                <div class="col-lg-6">
+                                    <div class="thumbnail">
+                                        <a href="Ex/Ex-02_cmd.png" target="_blank">
+                                            <img src="Ex/Ex-02_cmd.png" alt="Lights" style="width:100%">
+                                            <div class="caption">
+                                                <p class="main-text">Code command example in Python version 2.7</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="thumbnail">
+                                        <a href="Ex/Ex-02_result.png" target="_blank">
+                                            <img src="Ex/Ex-02_result.png" alt="Nature" style="width:100%">
+                                            <div class="caption">
+                                                <p class="main-text">Code result example in Python version 2.7</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </p>
+
+                    <p class="thai_distributed" style="margin: 0px 0px 0px 20px">
+                        <span class="tab_1"></span>จากตัวอย่างดังกล่าวจะเห็นได้ว่าฟังก์ชั่น <code>input( )</code> และ
+                        <code>raw_input()</code>
+                        เป็นการรับค่า <u>ตัวอักษร(string )</u> ที่ได้มาจากคีย์บอร์ดมาเก็บไว้ที่ตัวแปร <u>username</u>
+                        ก่อนจะนำไปแสดงผลต่อไป
+                        ในบางครั้งผู้เขียนโปรแกรมอาจต้องการให้ค่าที่รับมานั้นเป็น <u>ตัวเลขจำนวนเต็ม(integer)</u> หรือ
+                        <u>ตัวเลขทศนิยม(float)</u> ก็สามารถทำได้เช่นเดี่ยวกัน
+                        โดยการแปลงค่าที่รับจากคีย์บอร์ดเป็นตัวแปรชนิดที่ต้องการเสียก่อน
+                    </p>
+
+                    <p style="margin: 0px 0px 0px 20px">
+                        <div class="main-text"> 
+                            <link rel="stylesheet"
+                                href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+                            <div class="col-lg-6">
+                                <div class="thumbnail">
+                                    <a href="Ex/Ex-03_Python_result.png" target="_blank">
+                                        <img src="Ex/Ex-03_Python_result.png" alt="Lights" style="width:100%">
+                                        <div class="caption">
+                                            <p>Code command when using integer variable</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </p>
+
+                    <p class="thai_distributed" style="margin: 0px 0px 0px 20px">
+                        <span class="tab_1"></span>จะเห็นได้ว่าฟังก์ชั่น <code>input()</code>
+                        จากตัวอย่างดังกล่าวนั้นมีการเปิดรับค่าที่เป็นตัวเลข
+                        ปีของผู้เกิดที่เป็น ค.ศ.
+                        เมื่อผู้ใช้ทำการใส่ปีเกิดที่เป็นตัวเลขเป็นที่เรียบร้อยแล้วโปรแกรมจะทำการคำนวณค่าที่ได้ออกมาเป็นอายุของผู้ใช้
+                        อย่างไรก็ดีจะเห็นไดว่าโปรแกรมดังกล่าวนั้นยังคงมีจุดบกพร่องกล่าวคือ
+                        โปรแกรมไม่ได้มีการตรวจสอบค่าที่ได้รับว่าเป็นตัวเลขหรือไม่
+                        หากผู้ใช้ป้อนตัวอักษรเข้ามาในส่วนของการระบุปีเกิดก็จะเกิดข้อ <u>ผิดพลาด(error)</u>
+                        และจะออกจากโปรแกรมโดยอัตโนมัติ
+                    <ul class="tab_2">
+                        <li><a href="AgeCalulation_1.py" target="_blank">ตัวอย่าง Code โปรแกรม</a></li>
+                    </ul>
+                    </p>
+
+                    <p>
+                    <h4> การแก้ไขปัญหาการรับค่าผิดพลาดด้วยฟังก์ชั่น <code>while()</code> และ <code>try-except()</code>
+                    </h4>
+                    </p>
+
+                    <p class="thai_distributed" style="margin: 0px 0px 0px 20px">
+                        <span class="tab_1"></span>สำหรับการแก้ไขในเบื้องต้นสามารถทำได้โดยการเพิ่มฟังก์ชั่น
+                        <code>while()</code> และ <code>try-except()</code>
+                        ประกอบกันเพื่อทำการตรวจสอบว่าการป้อนข้อมูลนั้นเป็นตัวเลขหรือไม่
+                        หากไม่ใช่โปรแกรมจะทำการแจ้งเตือนผู้ใช้งานให้ทราบและวนกลับไปที่จุดเริ่มต้นของโปรแกรมเพื่อให้ผู้ใช้งานป้อนข้อมูลให้ถูกต้อง
+                    </p>
+
+                    <p style="margin: 0px 0px 0px 20px">
+                        <div class="main-text">
+                            <link rel="stylesheet"
+                                href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+                            <div class="col-lg-6">
+                                <div class="thumbnail">
+                                    <a href="Ex/Ex-04_Python_result.png" target="_blank">
+                                        <img src="Ex/Ex-04_Python_result.png" alt="Lights" style="width:100%">
+                                        <div class="caption">
+                                            <p>Code command when using try-exept()</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </p>
+
+                    <p class="thai_distributed" style="margin: 0px 0px 0px 20px">
+                        <span class="tab_1"></span>โปรแกรมดังกล่าวเป็นโปรแกรมที่ได้มีการเพิ่มเติมฟังก์ชั่น
+                        <code>while()</code> และ <code>try-except()</code>
+                        เข้าไปเพื่อใช้สำหรับการตรวจสอบโดยมีการทำงานในส่วนต่าง ๆ ดังต่อไปนี้
+                    <ul class="tab_2">
+                        <li>ส่วนที่ 1 : รับข้อมูลชื่อที่เป็นตัวอักษรจากผู้ใช้</li>
+                        <li>ส่วนที่ 2 : รับข้อมูลปีเกิดจากผู้ใช้ โดยใช้การวนลูปการทำงานด้วยฟังก์ชั่น
+                            <code>while()</code>และฟังก์ชัน <code>try-except</code>
+                            เพื่อตรวจสอบว่าผู้ใช้ป้อนปีเกิดเป็นตัวเลขหรือไม่
+                            ถ้าไม่ใช่ตัวเลขโปรแกรมจะแจ้งเตือนผู้ใช้ให้ป้อนใหม่จนกว่าจะถูกต้อง
+                        </li>
+                        <li>ส่วนที่ 3 : คำนวณอายุจากสมการ <q>current_year - birth_year</q> </li>
+                        <li>ส่วนที่ 4 : แสดงผลข้อมูลด้วยฟังก์ชั่น <code>print()</code> </li>
+                        <li><a href="AgeCalulation_2.py" target="_blank">ตัวอย่าง Code โปรแกรม</a></li>
+                    </ul>
+                    </p>
+
+                    <p>
+                    <h4> ตัวอย่างโปรแกรมรับค่าในแบบอื่น ๆ </code> </h4>
+                    </p>
+
+                    <p class="thai_distributed" style="margin: 0px 0px 0px 20px">
+                        <span
+                            class="tab_1"></span>ตัวอย่างถัดมาจะเป็นการประยุกต์ใช้งานโปรแกรมจากบทเรียนที่ได้กล่าวมาโดยจะทำการใช้งาน
+                        <code>while()</code> และ <code>try-except()</code> ประกอบกับตัวแปรชนิด <code>float</code>
+                        โดยที่มีการจำกัดความยาวของตัวอักษร
+                    </p>
+
+                    <p style="margin: 0px 0px 0px 20px">
+                        <div class="main-text">
+                            <link rel="stylesheet"
+                                href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+                            <div class="col-lg-6">
+                                <div class="thumbnail">
+                                    <a href="Ex/Ex-05_Python_result.png" target="_blank">
+                                        <img src="Ex/Ex-05_Python_result.png" alt="Lights" style="width:100%">
+                                        <div class="caption">
+                                            <p>Code command when using try-exept()</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </p>
+
+                    <p class="thai_distributed" style="margin: 0px 0px 0px 20px">
+                        <span class="tab_1"></span>โปรแกรมดังกล่าวเป็นโปรแกรมที่ได้มีการเพิ่มเติมฟังก์ชั่น
+                        <code>while()</code> และ <code>try-except()</code>
+                        เข้าไปเพื่อใช้สำหรับการตรวจสอบโดยมีการทำงานในส่วนต่าง ๆ ดังต่อไปนี้
+                    <ul class="tab_2">
+                        <li>ส่วนที่ 1 : รับข้อมูลยี่ห้อของรถที่เป็นตัวอักษรจากผู้ใช้กำหนดไว้ไม่เกิน 20 ตัวอักษร</li>
+                        <li>ส่วนที่ 2 : รับข้อมูลรุ่นของรถที่เป็นตัวอักษรจากผู้ใช้กำหนดไว้ไม่เกิน 20 ตัวอักษร</li>
+                        <li>ส่วนที่ 3 : รับข้อมูลปีที่ผลิตของรถที่เป็นตัวเลขจำนวนเต็มจากผู้ใช้กำหนดไว้ไม่เกิน 4 หลัก
+                            โดยใช้การวนลูปการทำงานด้วยฟังก์ชั่น <code>while()</code>และฟังก์ชัน <code>try-except</code>
+                            เพื่อตรวจสอบว่าผู้ใช้ป้อนเป็นตัวเลขหรือไม่
+                            ถ้าไม่ใช่ตัวเลขโปรแกรมจะแจ้งเตือนผู้ใช้ให้ป้อนใหม่จนกว่าจะถูกต้อง</li>
+                        <li>ส่วนที่ 4 : รับข้อมูลสีรถที่เป็นตัวอักษรจากผู้ใช้กำหนดไว้ไม่เกิน 10 ตัวอักษร</li>
+                        <li>ส่วนที่ 5 : รับข้อมูลราคารถที่เป็นตัวเลขจำนวนเต็มหรือทศนิยมจากผู้ใช้
+                            โดยใช้การวนลูปการทำงานด้วยฟังก์ชั่น <code>while()</code>และฟังก์ชัน <code>try-except</code>
+                            เพื่อตรวจสอบว่าผู้ใช้ป้อนเป็นตัวเลขหรือไม่
+                            ถ้าไม่ใช่ตัวเลขโปรแกรมจะแจ้งเตือนผู้ใช้ให้ป้อนใหม่จนกว่าจะถูกต้อง</li>
+                        <li>ส่วนที่ 6 : แสดงผลข้อมูลด้วยฟังก์ชั่น <code>print()</code> </li>
+                        <li><a href="CarInfo_3.py" target="_blank">ตัวอย่าง Code โปรแกรม</a></li>
+                    </ul>
+                    </p>
+
+                </div>
+            </fieldset>
+        </article>
+
+        <article class="article" style="background-color: #f5b7b1;">
+            <fieldset>
+                <legend>
+                    <h2 style="font-size:20px;"> แบบฝึกหัด </h2>
+                </legend>
+
+                <p style="margin: 0px 0px 0px 20px">
+                <ul>
+
+                    <b style="font-size:14px;"><u>Exercise 01 : คำสั่งที่ใช้ในการรับค่า Input ของ Python
+                            คือข้อใด?</u></b>
+                    <p>
+                        <input type="radio" name="exercise_01" value="a" id="ex01_ans01">
+                        <label for="a"><code>input()</code></label>
+                        <br><input type="radio" name="exercise_01" value="b" id="ex01_ans02">
+                        <label for="b"><code>raw_input()</code></label>
+                        <br><input type="radio" name="exercise_01" value="c" id="ex01_ans03">
+                        <label for="c">ถูกทุกข้อ</label>
+                    </p>
+
+                    <p>
+                        <button type="button" onclick="display_01()"> Hint! </button>
+                    </p>
+
+                    <p id = "output01"> </p>
+
+                    <p>
+                        <button onclick = "checkRadio01()"> เฉลย! </button>
+                    </p>
+                    
+                    <script>
+                        let output01 = document.getElementById("output01");
+                        function checkRadio01(){
+                            // accessing the radio buttons
+                            let ex01_ans01 = document.getElementById('ex01_ans01');
+                            let ex01_ans02 = document.getElementById('ex01_ans02');
+                            let ex01_ans03 = document.getElementById('ex01_ans03');
+                            // checking if any radio button is selected
+                            if(ex01_ans03.checked){
+                                    alert("Your answer is corrected!");
+                                    ex01_ans01.checked = false;
+                                    ex01_ans02.checked = false;
+                                    ex01_ans03.checked = false;
+                                } else {
+                                    alert("Your answer is incorrected!");
+                                    ex01_ans01.checked = false;
+                                    ex01_ans02.checked = false;
+                                    ex01_ans03.checked = false;
+                                }
+                            }
+                    </script>
+
+                    <b style="font-size:14px;"><u>Exercise 02 : ฟังก์ชั่น user input
+                            สามารถรับค่าตัวแปรชนิดใดได้บ้าง?</u></b>
+                    <p>
+                        <input type="radio" name="exercise_02" value="a" id="ex02_ans01">
+                        <label for="a">ตัวเลข (Number)</label>
+                        <br><input type="radio" name="exercise_02" value="b" id="ex02_ans02">
+                        <label for="b">ตัวอักษร (Character)</label>
+                        <br><input type="radio" name="exercise_02" value="c" id="ex02_ans03">
+                        <label for="c">ถูกทุกข้อ</label>
+                    </p>
+
+                    <p>
+                        <button type="button" onclick="display_02()"> Hint! </button>
+                    </p>
+
+                    <p id = "output02"> </p>
+
+                    <p>
+                        <button onclick = "checkRadio02()"> เฉลย! </button>
+                    </p>
+                    
+                    <script>
+                        let output02 = document.getElementById("output02");
+                        function checkRadio02(){
+                            // accessing the radio buttons
+                            let ex02_ans01 = document.getElementById('ex02_ans01');
+                            let ex02_ans02 = document.getElementById('ex02_ans02');
+                            let ex02_ans03 = document.getElementById('ex02_ans03');
+                            // checking if any radio button is selected
+                            if(ex02_ans03.checked){
+                                    alert("Your answer is corrected!");
+                                    ex02_ans01.checked = false;
+                                    ex02_ans02.checked = false;
+                                    ex02_ans03.checked = false;
+                                } else {
+                                    alert("Your answer is incorrected!");
+                                    ex02_ans01.checked = false;
+                                    ex02_ans02.checked = false;
+                                    ex02_ans03.checked = false;
+                                }
+                            }
+                    </script>
+
+                    <b style="font-size:14px;"><u>Exercise 03 : ข้อใดต่อไปนี้เป็นการเขียนโปรแกรมเพื่อรับค่า input
+                            ที่ถูกต้อง?</u></b>
+                    <p>
+                        <input type="radio" name="exercise_03" value="a" id="ex03_ans01">
+                        <label for="a"><code>number = int(input("กรุณาระบุตัวเลขที่ต้องการ"))</code></label>
+                        <br><input type="radio" name="exercise_03" value="b" id="ex03_ans02">
+                        <label for="b"><code>chr = input("กรุณาใส่ชื่อของคุณ)</code></label>
+                        <br><input type="radio" name="exercise_03" value="c" id="ex03_ans03">
+                        <label for="c">ถูกทุกข้อ</label>
+                    </p>
+
+                    <p>
+                        <button type="button" onclick="display_03()"> Hint! </button>
+                    </p>
+
+                    <p id = "output03"> </p>
+
+                    <p>
+                        <button onclick = "checkRadio03()"> เฉลย! </button>
+                    </p>
+                    
+                    <script>
+                        let output03 = document.getElementById("output03");
+                        function checkRadio03(){
+                            // accessing the radio buttons
+                            let ex03_ans01 = document.getElementById('ex03_ans01');
+                            let ex03_ans02 = document.getElementById('ex03_ans02');
+                            let ex03_ans03 = document.getElementById('ex03_ans03');
+                            // checking if any radio button is selected
+                            if(ex03_ans03.checked){
+                                    alert("Your answer is corrected!");
+                                    ex03_ans01.checked = false;
+                                    ex03_ans02.checked = false;
+                                    ex03_ans03.checked = false;
+                                } else {
+                                    alert("Your answer is incorrected!");
+                                    ex03_ans01.checked = false;
+                                    ex03_ans02.checked = false;
+                                    ex03_ans03.checked = false;
+                                }
+                            }
+                    </script>
+
+                    <b style="font-size:14px;"><u>Exercise 04 :
+                            จงเติมคำในช่องว่างเพื่อให้โปรแกรมที่เขียนมีความถูกต้องสมบูรณ์</u> ===>
+                        <code>var01 =__________("กรุณาใส่ค่าที่ต้องการ"))</code></b>
+                    <p>
+                        <input type="radio" name="exercise_04" value="a" id="ex04_ans01">
+                        <label for="a"><code>int</code></label>
+                        <br><input type="radio" name="exercise_04" value="b" id="ex04_ans02">
+                        <label for="b"><code>float</code></label>
+                        <br><input type="radio" name="exercise_04" value="c" id="ex04_ans03">
+                        <label for="c"><code>float(int</code></label>
+                        <br><input type="radio" name="exercise_04" value="d" id="ex04_ans04">
+                        <label for="d"><code>int(int</code></label>
+                        <br><input type="radio" name="exercise_04" value="e" id="ex04_ans05">
+                        <label for="e"><code>int(input</code></label>
+                        <br><input type="radio" name="exercise_04" value="f" id="ex04_ans06">
+                        <label for="f">ถูกทุกข้อ</label>
+                    </p>
+
+                    <p>
+                        <button type="button" onclick="display_04()"> Hint! </button>
+                    </p>
+
+                    <p id = "output04"> </p>
+
+                    <p>
+                        <button onclick = "checkRadio04()"> เฉลย! </button>
+                    </p>
+                    
+                    <script>
+                        let output04 = document.getElementById("output04");
+                        function checkRadio04(){
+                            // accessing the radio buttons
+                            let ex04_ans01 = document.getElementById('ex04_ans01');
+                            let ex04_ans02 = document.getElementById('ex04_ans02');
+                            let ex04_ans03 = document.getElementById('ex04_ans03');
+                            let ex04_ans04 = document.getElementById('ex04_ans04');
+                            let ex04_ans05 = document.getElementById('ex04_ans05');
+                            let ex04_ans06 = document.getElementById('ex04_ans06');
+                            // checking if any radio button is selected
+                            if(ex04_ans05.checked){
+                                    alert("Your answer is corrected!");
+                                    ex04_ans01.checked = false;
+                                    ex04_ans02.checked = false;
+                                    ex04_ans03.checked = false;
+                                    ex04_ans04.checked = false;
+                                    ex04_ans05.checked = false;
+                                    ex04_ans06.checked = false;
+                                } else {
+                                    alert("Your answer is incorrected!");
+                                    ex04_ans01.checked = false;
+                                    ex04_ans02.checked = false;
+                                    ex04_ans03.checked = false;
+                                    ex04_ans04.checked = false;
+                                    ex04_ans05.checked = false;
+                                    ex04_ans06.checked = false;
+                                }
+                            }
+                    </script>
+
+                    <b style="font-size:14px;"><u>Exercise 05 : ถ้าต้องการระบุค่าตัวเลขต้องใช้คำสั่งใด?</u> ===>
+                        <code>number01 =__________("กรุณาใส่ตัวเลข"))</code></b>
+                    <p>
+                        <input type="radio" name="exercise_05" value="a" id="ex05_ans01">
+                        <label for="a"><code>int</code></label>
+                        <br><input type="radio" name="exercise_05" value="b" id="ex05_ans02">
+                        <label for="b"><code>float</code></label>
+                        <br><input type="radio" name="exercise_05" value="c" id="ex05_ans03">
+                        <label for="c"><code>float(input</code></label>
+                        <br><input type="radio" name="exercise_05" value="d" id="ex05_ans04">
+                        <label for="d"><code>int(int</code></label>
+                        <br><input type="radio" name="exercise_05" value="e" id="ex05_ans05">
+                        <label for="e"><code>input(int</code></label>
+                        <br><input type="radio" name="exercise_05" value="f" id="ex05_ans06">
+                        <label for="f">ถูกทุกข้อ</label>
+                    </p>
+
+                    <p>
+                        <button type="button" onclick="display_05()"> Hint! </button>
+                    </p>
+
+                    <p id = "output05"> </p>
+
+                    <p>
+                        <button onclick = "checkRadio05()"> เฉลย! </button>
+                    </p>
+                    
+                    <script>
+                        let output05 = document.getElementById("output05");
+                        function checkRadio05(){
+                            // accessing the radio buttons
+                            let ex05_ans01 = document.getElementById('ex05_ans01');
+                            let ex05_ans02 = document.getElementById('ex05_ans02');
+                            let ex05_ans03 = document.getElementById('ex05_ans03');
+                            let ex05_ans04 = document.getElementById('ex05_ans04');
+                            let ex05_ans05 = document.getElementById('ex05_ans05');
+                            let ex05_ans06 = document.getElementById('ex05_ans06');
+                            // checking if any radio button is selected
+                            if(ex05_ans03.checked){
+                                    alert("Your answer is corrected!");
+                                    ex05_ans01.checked = false;
+                                    ex05_ans02.checked = false;
+                                    ex05_ans03.checked = false;
+                                    ex05_ans04.checked = false;
+                                    ex05_ans05.checked = false;
+                                    ex05_ans06.checked = false;
+                                } else {
+                                    alert("Your answer is incorrected!");
+                                    ex05_ans01.checked = false;
+                                    ex05_ans02.checked = false;
+                                    ex05_ans03.checked = false;
+                                    ex05_ans04.checked = false;
+                                    ex05_ans05.checked = false;
+                                    ex05_ans06.checked = false;
+                                }
+                            }
+                    </script>
+
+                    <b style="font-size:14px;"><u>Exercise 06 : ถ้าต้องการให้คำสั่งดั่งกล่าวกำหนดค่า input ได้ที่ 20
+                            ตัวอักษรข้อใดถูกต้อง?</u> ===> </b>
+                    <br>
+                    <br>
+                    <div class="tab_1">while <code>__________</code></div>
+                    <br>
+                    <div class="tab_2">fname = input("กรุณาใส่ชื่อของท่าน : ")</div>
+                    <br>
+                    <div class="tab_2">if len(fname) <code>__________</code></div>
+                    <br>
+                    <div class="tab_3">break</div>
+                    <br>
+                    <div class="tab_2">print("ต้องไม่เกิน 20 ตัวอักษร")</div>
+                    <br>
+                    <div class="tab_1">print(f"\nชื่อของท่านคือ : {inputVar}")</div>
+                    <br>
+                    <br>
+                    <p>
+                        <input type="radio" name="exercise_06" value="a" id="ex06_ans01">
+                        <label for="a"><code>int</code> และ <code>int</code></label>
+                        <br><input type="radio" name="exercise_06" value="b" id="ex06_ans02">
+                        <label for="b"><code>False</code> และ <code>int</code></label>
+                        <br><input type="radio" name="exercise_06" value="c" id="ex06_ans03">
+                        <label for="c"><code>True</code> และ <code>= 20</code></label>
+                        <br><input type="radio" name="exercise_06" value="d" id="ex06_ans04">
+                        <label for="d"><code>False:</code> และ <code>= 20:</code></label>
+                        <br><input type="radio" name="exercise_06" value="e" id="ex06_ans05">
+                        <label for="e"><code>True:</code> และ <code><= 20:</code></label>
+                        <br><input type="radio" name="exercise_06" value="f" id="ex06_ans06">
+                        <label for="f">ถูกทุกข้อ</label>
+                    </p>
+
+                    <p>
+                        <button type="button" onclick="display_06()"> Hint! </button>
+                    </p>
+
+                    <p id = "output06"> </p>
+
+                    <p>
+                        <button onclick = "checkRadio06()"> เฉลย! </button>
+                    </p>
+                    
+                    <script>
+                        let output06 = document.getElementById("output06");
+                        function checkRadio06(){
+                            // accessing the radio buttons
+                            let ex06_ans01 = document.getElementById('ex06_ans01');
+                            let ex06_ans02 = document.getElementById('ex06_ans02');
+                            let ex06_ans03 = document.getElementById('ex06_ans03');
+                            let ex06_ans04 = document.getElementById('ex06_ans04');
+                            let ex06_ans05 = document.getElementById('ex06_ans05');
+                            let ex06_ans06 = document.getElementById('ex06_ans06');
+                            // checking if any radio button is selected
+                            if(ex06_ans05.checked){
+                                    alert("Your answer is corrected!");
+                                    ex06_ans01.checked = false;
+                                    ex06_ans02.checked = false;
+                                    ex06_ans03.checked = false;
+                                    ex06_ans04.checked = false;
+                                    ex06_ans05.checked = false;
+                                    ex06_ans06.checked = false;
+                                } else {
+                                    alert("Your answer is incorrected!");
+                                    ex06_ans01.checked = false;
+                                    ex06_ans02.checked = false;
+                                    ex06_ans03.checked = false;
+                                    ex06_ans04.checked = false;
+                                    ex06_ans05.checked = false;
+                                    ex06_ans06.checked = false;
+                                }
+                            }
+                    </script>
+
+                    <b style="font-size:14px;"><u>Exercise 07 : ถ้าต้องการให้คำสั่งดั่งกล่าวกำหนดค่า input
+                            เป็นตัวเลขจำนวนเต็มและสามารถใส่ค่าได้ที่ 5 ตัวเลขข้อใดถูกต้อง?</u> ===> </b>
+                    <br>
+                    <br>
+                    <div class="tab_1">while True:</div>
+                    <br>
+                    <div class="tab_2"><code>__________:</code></div>
+                    <br>
+                    <div class="tab_2">zipCode = <code>__________</code>("กรุณาระบุหมายเลขไปรษณีย์ : "))</div>
+                    <br>
+                    <div class="tab_2">if <code>__________</code> == <code>__________</code></div>
+                    <br>
+                    <div class="tab_3">break</div>
+                    <br>
+                    <div class="tab_2">print("ต้องไม่เกิน 5 ตัวเลข")</div>
+                    <br>
+                    <div class="tab_2"><code>__________:</code></div>
+                    <br>
+                    <div class="tab_2">print("รหัสไปรษณีย์ต้องเป็นตัวเลขเท่าน้้น!!!!!")</div>
+                    <br>
+                    <div class="tab_1">print(f"\nรหัสไปรษณีย์คือ : {inputVar}")</div>
+                    <br>
+                    <br>
+                    <p>
+                        <input type="radio" name="exercise_07" value="a" id="ex07_ans01">
+                        <label for="a"><code>try</code>, <code>int</code>, <code>len(zipCode)</code>, <code>5</code> และ
+                            <code>except ValueError</code></label>
+                        <br><input type="radio" name="exercise_07" value="b" id="ex07_ans02">
+                        <label for="b"><code>if</code>, <code>int(int</code>, <code>len(zipCode)</code>, <code>5</code>
+                            และ <code>then</code></label>
+                        <br><input type="radio" name="exercise_07" value="c" id="ex07_ans03">
+                        <label for="c"><code>try:</code>, <code>int(int</code>, <code>len(zipCode)</code>,
+                            <code>5</code> และ <code>except ValueError:</code></label>
+                        <br><input type="radio" name="exercise_07" value="d" id="ex07_ans04">
+                        <label for="d"><code>try</code>, <code>int(input</code>, <code>len(str(zipCode))</code>,
+                            <code>5</code> และ <code>except ValueError:</code></label>
+                        <br><input type="radio" name="exercise_07" value="e" id="ex07_ans05">
+                        <label for="e"><code>try</code>, <code>int(input</code>, <code>len(str(zipCode))</code>,
+                            <code>5:</code> และ <code>except ValueError</code></label>
+                        <br><input type="radio" name="exercise_07" value="f" id="ex07_ans06">
+                        <label for="f">ไม่มีข้อที่ถูกต้อง</label>
+                    </p>
+
+                    <p>
+                        <button type="button" onclick="display_07()"> Hint! </button>
+                    </p>
+
+                    <p id = "output07"> </p>
+
+                    <p>
+                        <button onclick = "checkRadio07()"> เฉลย! </button>
+                    </p>
+                    
+                    <script>
+                        let output07 = document.getElementById("output07");
+                        function checkRadio07(){
+                            // accessing the radio buttons
+                            let ex07_ans01 = document.getElementById('ex07_ans01');
+                            let ex07_ans02 = document.getElementById('ex07_ans02');
+                            let ex07_ans03 = document.getElementById('ex07_ans03');
+                            let ex07_ans04 = document.getElementById('ex07_ans04');
+                            let ex07_ans05 = document.getElementById('ex07_ans05');
+                            let ex07_ans06 = document.getElementById('ex07_ans06');
+                            // checking if any radio button is selected
+                            if(ex07_ans05.checked){
+                                    alert("Your answer is corrected!");
+                                    ex07_ans01.checked = false;
+                                    ex07_ans02.checked = false;
+                                    ex07_ans03.checked = false;
+                                    ex07_ans04.checked = false;
+                                    ex07_ans05.checked = false;
+                                    ex07_ans06.checked = false;
+                                } else {
+                                    alert("Your answer is incorrected!");
+                                    ex07_ans01.checked = false;
+                                    ex07_ans02.checked = false;
+                                    ex07_ans03.checked = false;
+                                    ex07_ans04.checked = false;
+                                    ex07_ans05.checked = false;
+                                    ex07_ans06.checked = false;
+                                }
+                            }
+                    </script>
+
+                    <p>
+                        <b style="font-size:14px;"><u>Exercise 08 :
+                                จงเขียนโปรแกรมให้สามารถรับค่าข้อมูลที่เป็นตัวเลขและตัวอักษรโดยกำหนดค่าที่รับไม่เกิน 10
+                                ตัวอักษร</u></b>
+                        <br>
+                    <p>
+                        <button type="button" onclick="display_08()"> Click Here </button>
+                    </p>
+                    </p>
+
+                    <p>
+                        <b style="font-size:14px;"><u>Exercise 09 :
+                                จงเขียนโปรแกรมให้สามารถรับค่าข้อมูลที่เป็นตัวเลขที่มีการตรวจสอบค่าที่ได้
+                                โดยหากไม่ใช่ตัวเลขให้แจ้งเตือนและกลับไปเริ่มกระบวนการใหม่</u></b>
+                        <br>
+                    <p>
+                        <button type="button" onclick="display_09()"> Click Here </button>
+                    </p>
+                    </p>
+
+                </ul>
+                </p>
+            </fieldset>
+        </article>
+    </main>
+
+    <section>
+
+    </section>
+
+    <footer>
+        <small> <b>นำเสนอโดย : </b>นายสมศักดิ์ ทับทองดี - <b>รหัสนักศึกษา : </b>056760405624-0 - <b>คณะ :
+            </b>วิศวกรรมศาสตร์ - <b>สาขาวิชา : </b>วิศวกรรมคอมพิวเตอร์</small>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+/*ใช้สำหรับสร้างพื้นหลังของ Header หรือ Footer*/
+header,footer {
+    background-color: #bb8fce ; /*convert colour จาก CMYK เป็น HTML colour code*/
+    border-radius: 8px;
+    padding: 10px;
+    color: white;
+}
+
+/*สร้าง aside เพื่อกำหนดการวางตำแหน่งของ element ที่ต้องการชิดขอบซ้าย มีความกว้าง 20% โดยมีการหนดสีพื้นและห่างจาก Element ด้านขวาไป 2%*/
+aside{
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color:  rgb(221, 218, 218) ;
+    border-radius: 8px;
+    margin-right: 1%;
+}
+
+/*เลือก list ที่อยู่ใน aside และกำหนดให้มีเครื่องหมาย . อยู่ด้านหน้า*/
+aside{
+    list-style: none;
+}
+
+/*เลือก article ให้ชิดทางด้านขวา 78% และกำหนดสีพื้น*/
+article{
+    float: right;
+    width: 78%;
+    border-radius: 8px;
+    /*border: 2px solid gainsboro;*/
+    margin-top: 1px;
+    top: 15px;
+}
+
+/*เลือก footer ให้ล้างค่าชิดซ้ายและชิดขวา ตำแหน่งเลื่อนมาจากด้านบน 15 Pixel*/
+footer{
+    clear: both;
+    position: relative;
+    top: 15px;
+}
+
+/*้header,footer,section ให้มีความกว้าง 960 พิกเซล และปรับให้อยู่ตรงกลางหน้าจอ*/
+header, footer, section{
+    width: auto; /*ปรับ auto เพื่อให้ปรับขนาดได้ตามหน้าจอของ*/
+    margin: 2px;
+}
+
